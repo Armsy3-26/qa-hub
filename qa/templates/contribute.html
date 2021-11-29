@@ -1,0 +1,41 @@
+{% extends "layout.html"%}
+
+{% block content %}
+
+
+
+<form class="form-group mt-3" action="" role="form" method="post">
+
+	<textarea class="form-control" rows="5" name="question" type="question" placeholder="Enter a Question" required></textarea>
+
+	<br>
+
+	<textarea class="form-control" rows="10" name="answer" type="answer" placeholder="Enter an answer" required></textarea>
+
+	<br>
+
+	<center><button class=" btn-primary" >Submit</button></center>
+	</form>
+
+	<div class="col-md-3 " style="color: red">
+
+    <div id="sidebar">
+        <h1><center>Related </center></h1>
+
+        <p>Below are guidelines before you post any question! </p>
+
+        <ul>
+            <li>Search here first.</li>
+            <li>No broken language</li>
+            <li>Make it clear</li>
+            <li>Submit</li>
+        </ul>
+
+        <br>
+        
+        <p style="font-weight: italic; font-size:14px;">"Powered by QA-Hub"</p>
+    </div>
+</div>
+
+
+{% endblock %}

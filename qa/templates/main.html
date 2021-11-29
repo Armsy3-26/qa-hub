@@ -1,0 +1,97 @@
+{% extends "layout.html"%}
+
+{% block content%}
+<div class="col-md-8">
+    <center>
+    <form role="form" id="form-buscar" method="POST">
+<div class="form-group">
+<div class="input-group">
+<input class="form-control" type="text" name="value" placeholder="Search Question's Answer..." required/>
+<span class="input-group-btn">
+<button class="btn btn-primary">
+<i class="glyphicon glyphicon-search"></i> Search
+</button>
+</span>
+</div>
+</div>
+</form>
+</center>
+</div>
+<div class="container" style="color: ghostwhite;">
+    <div class="col-md-8">
+        <h1>{{question}}</h1>
+        <p>Asked on 12:09:87</p>
+    </div>
+</div>
+
+<br>
+
+<div class="container" style="color: yellowgreen;">
+    <h6>Answers</h6>
+    <div class="col-md-8">
+        <h1>{{question}}</h1>
+        <p>Answer by gavinnix</p>
+    </div>
+</div>
+
+<div class="container" style="color: yellowgreen;">
+    <h6>Answers</h6>
+    <div class="col-md-8">
+        <h1>{{question}} as illustrated by edison in his thesis it containns bert and gpt3 or git</h1>
+        <p>Answer by gavinnix</p>
+    </div>
+</div>
+
+<div class="container" style="color: yellowgreen;">
+    <h6>Answers</h6>
+    <div class="col-md-8">
+        <h1>{{question}}</h1>
+        <p>Answer by gavinnix</p>
+    </div>
+</div>
+
+<div class="postanswer-section">
+    <form method="post" action="">
+        {{form.hidden_tag()}}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-6">Post Your Answer</legend>
+            <div class="form-group">
+                {% if form.answer.errors %}
+                {{ form.answer(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.answer.errors%}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.answer(class="form.control form-control-lg")}}
+                {% endif %}
+            </div>
+      
+                {{ form.submit(class="btn1 btn-outline-info")}}
+
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<div class="col-md-3 " style="color: red">
+
+    <div id="sidebar">
+        <h1><center>Related </center></h1>
+
+        <p>Below are guidelines before you post any question! </p>
+
+        <ul>
+            <li>Search here first.</li>
+            <li>No broken language</li>
+            <li>Make it clear</li>
+            <li>Submit</li>
+        </ul>
+
+        <br>
+        
+        <p style="font-weight: italic; font-size:14px;">"Powered by QA-Hub"</p>
+    </div>
+</div>
+{% endblock %}

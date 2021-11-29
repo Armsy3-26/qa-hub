@@ -1,0 +1,30 @@
+{%extends "layout.html"%}
+
+{% block content%}
+
+<img class="rounded-circle account-img" src="{{current_user.image_file }}">
+
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card p-4">
+        <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="../static/moo.jpg" height="100" width="100" /></button> <span class="name mt-3">{{ current_user.username}}</span> <span class="idd">{{ current_user.email}}</span>
+
+          <form method="post" action=""  enctype="multipart/form-data">
+
+            <div class=" px-2 rounded mt-4 date "> <input name="username" type="username" placeholder={{current_user.username}}></div>
+
+           <div class="px-2 rounded mt-4"><textarea name="bio" type="bio" placeholder={{current_user.bio}} rows="2"></textarea></div>
+
+           <div ><input type="file" name="file"/></div>
+
+           <br>
+            
+            <div class=" d-flex mt-2"><button class="btn1 btn-dark">Update</button> </div>
+
+
+          </form>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

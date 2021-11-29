@@ -1,0 +1,27 @@
+{% extends "layout.html"%}
+
+{%block content%}
+
+<div class="container" style="margin-top: 8%;">
+<div class="col-md-8 col-md-offset-3">     
+<div class="row">
+<div id="logo" class="text-center">
+<h1>QA-Hub</h1><p style="color: whitesmoke;">"I am driven towards an end that i do not know. As i reach it, i shall become unnecessary and an atom shall suffice to shatter me, untill then all forces of human kind can do nothing to stop me."</p>
+</div>
+<form role="form" id="form-buscar" method="POST">
+<div class="form-group">
+<div class="input-group">
+<input class="form-control" type="text" name="value" placeholder="Search Question's Answer..." required/>
+<span class="input-group-btn">
+<button class="btn btn-primary">
+<i class="glyphicon glyphicon-search"></i> Search
+</button>
+</span>
+</div>
+</div>
+</form>
+</div>            
+</div>
+</div>
+
+{% endblock content %}
